@@ -54,6 +54,6 @@ Total of 19
 
 ![Running Test-Signed](ts1.jpg?raw=true "running Test-Signed")
 
-![Running Test-Signed](ts2.jpg?raw=true "running Test-Signed")
+![Running Test-Signed](ts2.jpg?raw=true "results of Test-Signed")
 
 
