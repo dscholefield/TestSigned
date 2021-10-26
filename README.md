@@ -1,12 +1,13 @@
 # TestSigned
-Powershell script to test for unsigned service DLLs on Windows10+ clients and Servers
+PowerShell script to test for unsigned service DLLs on Windows10+ clients and Servers
 
 DLLs relating to running services should be signed by a trusted organisation but sometimes unsigned services execute without signing (especially some legacy netsvcs services etc.)
 
-During any incident investigation it is important to identify whether any unknown/unrecognised unsigned DLLs are running and this script iterates through all running services and checks for a signed cert for each - listing the unsigned ones.
+During any incident investigation it is important to identify whether any unknown/unrecognised unsigned .exe's and DLLs are running and this script iterates through all running services and checks for a signed cert for each - listing the unsigned ones.
+
 For best use, collect a trusted baseline of unsigned services and compare the output of the tool.
 
-Note that you may need to change your Powershell ExecutionPolicy to allow an externally defined scipt to run by using the code:
+Note that you may need to change your PowerShell ExecutionPolicy to allow an externally defined script to run by using the code:
 
 ```
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
@@ -19,7 +20,7 @@ PS> . .\test-signed.ps1
 PS> Test-Signed
 ```
 
-The script will present a progress bar as each running service is inspected and will then report on unsigned DLLs, e.g.
+The script will present a progress bar as each running service is inspected and will then report on unsigned exe's and DLLs, e.g.
 ```
 Test-Signed V1.0
 D Scholefield Nov 2019
